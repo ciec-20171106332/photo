@@ -11,12 +11,7 @@
         {            
             FileStream fs = new FileStream(path, FileMode.Open, FileAccess.Read); //将图片以文件流的形式进行保存
             BinaryReader br = new BinaryReader(fs);
-            byte[] imgBytesIn = br.ReadBytes((int)fs.Length);  //将流读入到字节数组中
+            byte[] imgBytesIn = br.ReadBytes((int)fs.Length);  
             return imgBytesIn;
         }
-        //现实二进制流代表的图片
-        public void ShowImgByByte(byte[] imgBytesIn)
-        {
-            MemoryStream ms = new MemoryStream(imgBytesIn);
-            pictureBox1.Image = Image.FromStream(ms);
-        }
+      =====
